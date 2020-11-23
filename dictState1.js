@@ -41,6 +41,7 @@ function bang(){
 		if (inlet == 0){
 			
 			getStates();
+			updateDict();
 			//post(d2keys.length);
 			
 		}
@@ -62,10 +63,11 @@ function bang(){
 		}
 		if (inlet == 3){
 			
-				d1 = new Dict("state1");
-				d2 = new Dict("state2");
-				d1keys = d1.getkeys();
-				d2keys = d2.getkeys();
+				//d1 = new Dict("state1");
+				//d2 = new Dict("state2");
+				//d1keys = d1.getkeys();
+				//d2keys = d2.getkeys();
+				updateDict();
 			}
 	
 	
@@ -76,6 +78,15 @@ function msg_float(f){
 			sliderVal = f;
 			//outlet(3, sliderVal);
 		}
+	
+	}
+	
+function updateDict(){
+	
+	d1 = new Dict("state1");
+	d2 = new Dict("state2");
+	d1keys = d1.getkeys();
+	d2keys = d2.getkeys();
 	
 	}
 	
