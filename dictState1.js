@@ -1,18 +1,19 @@
 inlets = 4;
-outlets = 2;
+outlets = 3;
 
 var d1 = new Dict("state1");
 var d2 = new Dict("state2");
 var d1keys = d1.getkeys();
 var d2keys = d2.getkeys();
 var sliderVal;
+var excludedIDs = [];
 
 
 
 function getStates(){
-	post(d1.name);
+	//post(d1.name);
 	
-	post("d1 contents", "\n");
+	//post("d1 contents", "\n");
 	
 	for(var i = 0; i < d1keys.length; i++){
 		post(d1keys[i], "\n"); // This will post the key name
@@ -35,6 +36,22 @@ function interpolateStates(x, y, z){
 		}
 	
 	
+function removeDuplicates(){
+	
+	var excludeIDs = [];
+	
+	for (var i = 0; i < d1keys.length; i++){
+
+				if (d1.get(d1keys[i]) == d2.get(d2keys[i])){
+					excludeIDs.push(d1keys[i]);
+				}
+				else { 
+					excludeIDs.push(0);
+				}
+		}
+			return excludeIDs;
+	}
+
 
 function bang(){
 	
@@ -42,6 +59,8 @@ function bang(){
 			
 			getStates();
 			updateDict();
+			excludedIDs = removeDuplicates();
+			outlet(2, excludedIDs);
 			//post(d2keys.length);
 			
 		}
@@ -49,6 +68,7 @@ function bang(){
 		if (inlet == 1){
 		
 		for (var i = 0; i < d1keys.length; i++){
+			if (d1keys[i] != excludedIDs[i]){
 			//outlet(3,interpolateStates(d1.get(d1keys[i]), d2.get(d2keys[i]),sliderVal));
 			outlet(0, d1keys[i])
 			outlet(1, interpolateStates(d1.get(d1keys[i]), d2.get(d2keys[i]),sliderVal), "\n");
@@ -56,6 +76,7 @@ function bang(){
 		}
 		//outlet(3, interpolateStates(0.0,1.0,0.2));
 		//outlet(3,interpolateStates(d1.get(d1keys[3]), d2.get(d2keys[3]),sliderVal));
+		}
 		}
 	
 		if (inlet == 2){
