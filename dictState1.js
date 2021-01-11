@@ -1,5 +1,5 @@
-inlets = 4;
-outlets = 3;
+inlets = 5;
+outlets = 4;
 
 var d1 = new Dict("state1");
 var d2 = new Dict("state2");
@@ -73,6 +73,11 @@ function bang() {
   }
   if (inlet == 3) {
     updateDict();
+  }
+  if (inlet == 4) {
+    updateDict();
+	outlet(3, bang);
+
   }
 }
 function msg_float(f) {
