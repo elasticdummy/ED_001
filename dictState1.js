@@ -1,8 +1,10 @@
-inlets = 5;
+inlets = 6;
 outlets = 4;
 
-var d1 = new Dict("state1");
-var d2 = new Dict("state2");
+var d1name;
+var d2name;
+var d1 = new Dict(jsarguments[1]);
+var d2 = new Dict(jsarguments[2]);
 var d1keys = d1.getkeys();
 var d2keys = d2.getkeys();
 var sliderVal;
@@ -79,6 +81,11 @@ function bang() {
 	outlet(3, bang);
 
   }
+
+  if (inlet == 5) {
+	getStates();
+		
+  }
 }
 function msg_float(f) {
   if (inlet == 2) {
@@ -87,8 +94,36 @@ function msg_float(f) {
 }
 
 function updateDict() {
-  d1 = new Dict("state1");
-  d2 = new Dict("state2");
+  d1 = new Dict(jsarguments[1]);
+  d2 = new Dict(jsarguments[2]);
   d1keys = d1.getkeys();
   d2keys = d2.getkeys();
 }
+
+
+function anything() {
+	if (inlet == 5) {
+		//var dictID = arguments;
+		//var dictName = arrayfromargs(messagename, arguments);
+		//post(dictName);
+		
+		
+		d1.name = jsarguments[1];
+		d1keys = d1.getkeys();
+		post(jsarguments[1]);
+		post(d1.get(d1keys[1]));
+		
+		/*
+		if(dictName == "---state1") {
+			d1name = dictID;
+		}
+		
+		if(dictName == "---state2") {
+			d2name = dictID;
+		}
+		*/
+		
+	}
+	
+}
+
