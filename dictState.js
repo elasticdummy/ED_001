@@ -1,8 +1,8 @@
 inlets = 5;
 outlets = 4;
 
-var d1 = new Dict("---state1");
-var d2 = new Dict("---state2");
+var d1 = new Dict(jsarguments[1]);
+var d2 = new Dict(jsarguments[2]);
 var d1keys = d1.getkeys();
 var d2keys = d2.getkeys();
 var sliderVal;
@@ -87,8 +87,8 @@ function msg_float(f) {
 }
 
 function updateDict() {
-  d1 = new Dict("---state1");
-  d2 = new Dict("---state2");
+  d1.name = jsarguments[1];
+  d2.name = jsarguments[2];
   d1keys = d1.getkeys();
   d2keys = d2.getkeys();
 }
