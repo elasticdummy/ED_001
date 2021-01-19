@@ -1,12 +1,12 @@
 inlets = 2;
 outlets = 2;
 
-var userDialDict = new Dict("userDialID");
+var userDialDict = new Dict(jsarguments[1]);
 var userDialDictKeys = userDialDict.getkeys();
 var userMappedIDs = [];
 
 function getStates() {
-    var userDialDict = new Dict("userDialID");
+    userDialDict.name = jsarguments[1];
     var userDialDictKeys = userDialDict.getkeys();
     userMappedIDs = [];
 
