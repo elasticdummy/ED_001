@@ -40,6 +40,56 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"align" : 0,
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"fontname" : "Copperplate",
+					"fontsize" : 12.0,
+					"id" : "obj-39",
+					"ignoreclick" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1492.039283752441406, 129.876678500000025, 175.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 33.250000894069899, 404.191874258915618, 173.806567817926179, 19.341742111841711 ],
+					"rounded" : 5.0,
+					"text" : "Scanning Plugin Progress",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textjustification" : 0,
+					"textoncolor" : [ 1.0, 0.709803921568627, 0.196078431372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"indeterminate" : 0,
+					"maxclass" : "progress",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1501.0, 83.0, 32.0, 32.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 104.000000894069672, 362.24182915687561, 32.0, 32.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-37",
+					"index" : 11,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1501.0, 20.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -3430,7 +3480,7 @@
 , 							{
 								"name" : "Luca",
 								"default" : 								{
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3441,12 +3491,12 @@
 										"autogradient" : 0
 									}
 ,
-									"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
-									"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+									"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 									"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"fontname" : [ "Open Sans Semibold" ],
-									"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
-									"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ]
+									"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
+									"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3455,8 +3505,8 @@
 , 							{
 								"name" : "Matt",
 								"default" : 								{
-									"fontface" : [ 1 ],
-									"fontsize" : [ 10.0 ]
+									"fontsize" : [ 10.0 ],
+									"fontface" : [ 1 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3465,8 +3515,7 @@
 , 							{
 								"name" : "WTF",
 								"default" : 								{
-									"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
-									"fontsize" : [ 18.0 ],
+									"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -3477,10 +3526,11 @@
 										"autogradient" : 0
 									}
 ,
-									"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
+									"fontsize" : [ 18.0 ],
+									"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
+									"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 									"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
 									"fontname" : [ "HydrogenType" ],
-									"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 									"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
 								}
 ,
@@ -3490,9 +3540,7 @@
 , 							{
 								"name" : "classic",
 								"default" : 								{
-									"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"fontsize" : [ 9.0 ],
+									"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color1" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
@@ -3502,10 +3550,12 @@
 										"proportion" : 0.39
 									}
 ,
-									"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+									"fontsize" : [ 9.0 ],
+									"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 									"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"fontname" : [ "Geneva" ],
-									"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ]
+									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3560,9 +3610,9 @@
 								"name" : "classicKslider",
 								"default" : 								{
 									"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3600,8 +3650,8 @@
 , 							{
 								"name" : "classicNodes",
 								"default" : 								{
-									"fontsize" : [ 9.0 ],
 									"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
+									"fontsize" : [ 9.0 ],
 									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 								}
 ,
@@ -3706,8 +3756,6 @@
 , 							{
 								"name" : "dark-night-patch",
 								"default" : 								{
-									"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
-									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -3717,7 +3765,9 @@
 										"proportion" : 0.39
 									}
 ,
-									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
+									"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
+									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
+									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3731,9 +3781,7 @@
 , 							{
 								"name" : "jpatcher002",
 								"default" : 								{
-									"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 									"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
-									"fontsize" : [ 9.5 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color1" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
@@ -3743,6 +3791,8 @@
 										"proportion" : 0.39
 									}
 ,
+									"fontsize" : [ 9.5 ],
+									"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 									"fontname" : [ "Ableton Sans Book" ]
 								}
 ,
@@ -3752,8 +3802,7 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
@@ -3765,11 +3814,12 @@
 										"autogradient" : 0
 									}
 ,
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3871,8 +3921,8 @@
 , 							{
 								"name" : "purple",
 								"default" : 								{
-									"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ]
+									"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ],
+									"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3939,8 +3989,8 @@
 , 							{
 								"name" : "test",
 								"default" : 								{
-									"fontface" : [ 1 ],
-									"fontsize" : [ 10.0 ]
+									"fontsize" : [ 10.0 ],
+									"fontface" : [ 1 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3949,11 +3999,11 @@
 , 							{
 								"name" : "whitey",
 								"default" : 								{
-									"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
-									"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 									"fontsize" : [ 36.0 ],
+									"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
+									"fontname" : [ "Dirty Ego" ],
 									"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-									"fontname" : [ "Dirty Ego" ]
+									"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4018,7 +4068,7 @@
 					"fontname" : "Ableton Sans Medium",
 					"fontsize" : 8.5,
 					"id" : "obj-57",
-					"items" : [ "++bubbler", ",", "++chebyshev", ",", "++compand", ",", "++decimate", ",", "++delay", ",", "++flipper", ",", "++matrix", ",", "++phasor", ",", "++pitchdelay", ",", "3-Band", "EQ", ",", "Aalto", ",", "AlterEgo", ",", "ANIMATE", ",", "Atom", ",", "AUAudioFilePlayer", ",", "AUBandpass", ",", "AUDelay", ",", "AUDistortion", ",", "AUDynamicsProcessor", ",", "AUFilter", ",", "AUGraphicEQ", ",", "AUHighShelfFilter", ",", "AUHipass", ",", "AULowpass", ",", "AULowShelfFilter", ",", "AUMatrixMixer", ",", "AUMatrixReverb", ",", "AUMIDISynth", ",", "AUMixer", ",", "AUMixer3D", ",", "AUMultibandCompressor", ",", "AUMultiChannelMixer", ",", "AUMultiSplitter", ",", "AUNBandEQ", ",", "AUNetReceive", ",", "AUNetSend", ",", "AUNewPitch", ",", "AUParametricEQ", ",", "AUPeakLimiter", ",", "AUPitch", ",", "AUReverb2", ",", "AURogerBeep", ",", "AURoundTripAAC", ",", "AUSampleDelay", ",", "AUSampler", ",", "AUScheduledSoundPlayer", ",", "AUSoundFieldPanner", ",", "AUSpatialMixer", ",", "AUSpeechSynthesis", ",", "AUSphericalHeadPanner", ",", "AUVectorPanner", ",", "Backmask", ",", "Baervaag", ",", "BASSROOM", ",", "BassStation", ",", "BassStationStereo", ",", "Brusfri", ",", "CabbagePlugin", ",", "Chorus", "DIMENSION-D", ",", "Chorus_Effect", ",", "Chromaphone", 2, ",", "Circle2", ",", "CS-80", "V3", ",", "DAW", "Cassette", ",", "DAW", "LP", ",", "Decimort", 2, ",", "Degrader", ",", "Delay", ",", "Digitakt", ",", "Digitone", ",", "Dimension", "Expander", ",", "DLSMusicDevice", ",", "Drift", ",", "Driftmaker", ",", "Dumpster", "Fire", ",", "DX7", "V", ",", "Emulator", "I", ",", "Enkl", ",", "Esspresso", ",", "Expanse", ",", "FF", "Micro", ",", "FF", "One", ",", "FF", "Pro-C", "(Mono)", ",", "FF", "Pro-C", 2, ",", "FF", "Pro-C", ",", "FF", "Pro-DS", ",", "FF", "Pro-G", ",", "FF", "Pro-L", 2, ",", "FF", "Pro-MB", ",", "FF", "Pro-Q", 2, ",", "FF", "Pro-Q", ",", "FF", "Pro-R", ",", "FF", "Saturn", ",", "FF", "Simplon", ",", "FF", "Timeless", 2, ",", "FF", "Twin", 2, ",", "FF", "Volcano", 2, "(Mono)", ",", "FF", "Volcano", 2, ",", "Flanger", "BL-20", ",", "FlyingAutoWahwah", ",", "FlyingChorus", ",", "FlyingTremolo", ",", "Fracture", ",", "Frontier", ",", "Gaffel", ",", "Gain", ",", "Ghz", "CanOpener", "Studio", 3, ",", "Ghz", "Faraday", "Limiter", 3, ",", "Ghz", "Good", "Dither", 3, ",", "Ghz", "Lohi", 3, ",", "Ghz", "Lossy", 3, ",", "Ghz", "Megaverb", 3, ",", "Ghz", "Midside", 3, ",", "Ghz", "Midside", "Matrix", 3, ",", "Ghz", "Panpot", 3, ",", "Ghz", "Tiltshift", 3, ",", "Ghz", "Tone", "Control", 3, ",", "Ghz", "Trem", "Control", 3, ",", "Ghz", "Vulf", "Compressor", 3, ",", "Ghz", "Wow", "Control", 3, ",", "Giant", "Verb", ",", "GotoEQ", ",", "Grain", "Streamer", ",", "Grand", "Finale", ",", "Guitar", "Rig", 5, "FX", ",", "Guitar", "Rig", 5, "MFX", ",", "Haaze", ",", "Helm", ",", "HRTFPanner", ",", "Idee", "Fixer", ",", "iZotope", "BreakTweaker", ",", "iZotope", "DDLY", "Dynamic", "Delay", ",", "iZotope", "Iris", 2, ",", "iZotope", "Stutter", "Edit", ",", "iZotope", "Trash", 2, ",", "iZotope", "Vinyl", ",", "Jussi", ",", "Kaivo", ",", "Kleverb", ",", "Kontakt", 5, ",", "Korvpressor", ",", "Kuvert", ",", "LABS", ",", "LEVELS", ",", "Limiter", ",", "LUXE", ",", "Melodyne", ",", "Mini", "V3", ",", "MISHBY", ",", "MIXROOM", ",", "Modley", ",", "Movement", ",", "MPC", ",", "Muteomatic", ",", "Neutron", 3, "Compressor", ",", "Neutron", 3, "Equalizer", ",", "Neutron", 3, "Exciter", ",", "Neutron", 3, "Gate", ",", "Neutron", 3, "Sculptor", ",", "Neutron", 3, "Transient", "Shaper", ",", "Neutron", 3, "Visual", "Mixer", ",", "Neutron", 3, ",", "Odin2", ",", "OTT", ",", "Ozone", 9, "Dynamic", "EQ", ",", "Ozone", 9, "Dynamics", ",", "Ozone", 9, "Equalizer", ",", "Ozone", 9, "Exciter", ",", "Ozone", 9, "Imager", ",", "Ozone", 9, "Low", "End", "Focus", ",", "Ozone", 9, "Master", "Rebalance", ",", "Ozone", 9, "Match", "EQ", ",", "Ozone", 9, "Maximizer", ",", "Ozone", 9, "Spectral", "Shaper", ",", "Ozone", 9, "Vintage", "Compressor", ",", "Ozone", 9, "Vintage", "EQ", ",", "Ozone", 9, "Vintage", "Limiter", ",", "Ozone", 9, "Vintage", "Tape", ",", "Ozone", 9, ",", "Ozone", "Imager", ",", "Pads", ",", "Phaser", "BI-TRON", ",", "Phasis", ",", "Piapro", "Studio", "AU", ",", "Portal", ",", "Prophet", "V3", ",", "R0Verb", ",", "Reaktor", 6, "MFX", ",", "Reaktor", 6, "MIDIFX", ",", "Reaktor", 6, ",", "REAMP", ",", "REF", "SEND", ",", "REFERENCE", ",", "Relay", ",", "RoughRider3", ",", "RX", 7, "Breath", "Control", ",", "RX", 7, "Connect", ",", "RX", 7, "De-click", ",", "RX", 7, "De-clip", ",", "RX", 7, "De-crackle", ",", "RX", 7, "De-ess", ",", "RX", 7, "De-hum", ",", "RX", 7, "De-plosive", ",", "RX", 7, "De-reverb", ",", "RX", 7, "Monitor", ",", "RX", 7, "Mouth", "De-click", ",", "RX", 7, "Spectral", "De-noise", ",", "RX", 7, "Voice", "De-noise", ",", "Saturation", "Knob", ",", "Serum", ",", "SerumFX", ",", "sforzando", ",", "Snap", "Heap", ",", "Solina", "V2", ",", "Sonarworks", "Reference", 4, ",", "SoundField", "By", "RODE", ",", "Spectral", "Averaging", ",", "Spectral", "Bin", "Shift", ",", "Spectral", "Blurring", ",", "Spectral", "DroneMaker", ",", "Spectral", "Emergence", ",", "Spectral", "Filterbank", ",", "Spectral", "Freezing", ",", "Spectral", "Gate", "And", "Hold", ",", "Spectral", "Gliding", "Filters", ",", "Spectral", "Granulation", ",", "Spectral", "Harmonizer", ",", "Spectral", "Partial", "Glide", ",", "Spectral", "Pitch", "Shift", ",", "Spectral", "Pulsing", ",", "Spectral", "Shimmer", ",", "Spectral", "Shuffle", ",", "Spectral", "Stretch", ",", "Spectral", "Tracing", ",", "Spectral", "Weave", ",", "SquashIt", ",", "Stage-73", "V", ",", "Stereo", ",", "Strata", ",", "Stutter", "Edit", ",", "SubLab", ",", "Super", "Filterbank", ",", "SurferEQ", "Boogie", ",", "Surge", ",", "SurgeEffectsBank", ",", "Synclavier", "V", ",", "Syndt", ",", "TAL", "Reverb", 4, "Plugin", ",", "TAL-Chorus-LX", ",", "TAL-Filter-2", ",", "TAL-NoiseMaker", ",", "TAL-Reverb-2", ",", "TAL-Vocoder-2", ",", "Tonal", "Balance", "Control", 2, ",", "ValhallaFreqEcho", ",", "ValhallaSpaceModulator", ",", "ValhallaSupermassive", ",", "VariSpeed", ",", "Virta", ",", "voiceofsnow", ",", "Zap" ],
+					"items" : [ "++bubbler", ",", "++chebyshev", ",", "++compand", ",", "++decimate", ",", "++delay", ",", "++flipper", ",", "++matrix", ",", "++phasor", ",", "++pitchdelay", ",", "3-Band", "EQ", ",", "ANIMATE", ",", "Atom", ",", "AUAudioFilePlayer", ",", "AUBandpass", ",", "AUDelay", ",", "AUDistortion", ",", "AUDynamicsProcessor", ",", "AUFilter", ",", "AUGraphicEQ", ",", "AUHighShelfFilter", ",", "AUHipass", ",", "AULowpass", ",", "AULowShelfFilter", ",", "AUMatrixMixer", ",", "AUMatrixReverb", ",", "AUMixer", ",", "AUMixer3D", ",", "AUMultibandCompressor", ",", "AUMultiChannelMixer", ",", "AUMultiSplitter", ",", "AUNBandEQ", ",", "AUNetReceive", ",", "AUNetSend", ",", "AUNewPitch", ",", "AUParametricEQ", ",", "AUPeakLimiter", ",", "AUPitch", ",", "AUReverb2", ",", "AURogerBeep", ",", "AURoundTripAAC", ",", "AUSampleDelay", ",", "AUScheduledSoundPlayer", ",", "AUSoundFieldPanner", ",", "AUSpatialMixer", ",", "AUSpeechSynthesis", ",", "AUSphericalHeadPanner", ",", "AUVectorPanner", ",", "Backmask", ",", "BASSROOM", ",", "Brusfri", ",", "CabbagePlugin", ",", "Chorus", ",", "Chorus", ",", "Chorus", "DIMENSION-D", ",", "DAW", "Cassette", ",", "DAW", "LP", ",", "Decimort", 2, ",", "Degrader", ",", "Delay", ",", "Dimension", "Expander", ",", "Drift", ",", "Driftmaker", ",", "Dumpster", "Fire", ",", "Esspresso", ",", "FF", "Micro", ",", "FF", "Pro-C", ",", "FF", "Pro-C", "(Mono)", ",", "FF", "Pro-C", 2, ",", "FF", "Pro-DS", ",", "FF", "Pro-G", ",", "FF", "Pro-L", 2, ",", "FF", "Pro-MB", ",", "FF", "Pro-Q", ",", "FF", "Pro-Q", 2, ",", "FF", "Pro-R", ",", "FF", "Saturn", ",", "FF", "Simplon", ",", "FF", "Timeless", 2, ",", "FF", "Volcano", 2, ",", "FF", "Volcano", 2, "(Mono)", ",", "Flanger", "BL-20", ",", "FlyingChorus", ",", "FlyingTremolo", ",", "Fracture", ",", "Frontier", ",", "Gaffel", ",", "Gain", ",", "Ghz", "CanOpener", "Studio", 3, ",", "Ghz", "Faraday", "Limiter", 3, ",", "Ghz", "Good", "Dither", 3, ",", "Ghz", "Lohi", 3, ",", "Ghz", "Lossy", 3, ",", "Ghz", "Megaverb", 3, ",", "Ghz", "Midside", 3, ",", "Ghz", "Midside", "Matrix", 3, ",", "Ghz", "Panpot", 3, ",", "Ghz", "Tiltshift", 3, ",", "Ghz", "Tone", "Control", 3, ",", "Ghz", "Trem", "Control", 3, ",", "Ghz", "Vulf", "Compressor", 3, ",", "Ghz", "Wow", "Control", 3, ",", "Giant", "Verb", ",", "GotoEQ", ",", "Grain", "Streamer", ",", "Grand", "Finale", ",", "Guitar", "Rig", 5, "FX", ",", "Guitar", "Rig", 5, "MFX", ",", "Haaze", ",", "HRTFPanner", ",", "Idee", "Fixer", ",", "iZotope", "DDLY", "Dynamic", "Delay", ",", "iZotope", "Stutter", "Edit", ",", "iZotope", "Trash", 2, ",", "iZotope", "Vinyl", ",", "Kleverb", ",", "Korvpressor", ",", "Kuvert", ",", "LEVELS", ",", "Limiter", ",", "LUXE", ",", "Melodyne", ",", "MISHBY", ",", "MIXROOM", ",", "Modley", ",", "Movement", ",", "Muteomatic", ",", "Neutron", 3, ",", "Neutron", 3, "Compressor", ",", "Neutron", 3, "Equalizer", ",", "Neutron", 3, "Exciter", ",", "Neutron", 3, "Gate", ",", "Neutron", 3, "Sculptor", ",", "Neutron", 3, "Transient", "Shaper", ",", "Neutron", 3, "Visual", "Mixer", ",", "OTT", ",", "Ozone", 9, ",", "Ozone", 9, "Dynamic", "EQ", ",", "Ozone", 9, "Dynamics", ",", "Ozone", 9, "Equalizer", ",", "Ozone", 9, "Exciter", ",", "Ozone", 9, "Imager", ",", "Ozone", 9, "Low", "End", "Focus", ",", "Ozone", 9, "Master", "Rebalance", ",", "Ozone", 9, "Match", "EQ", ",", "Ozone", 9, "Maximizer", ",", "Ozone", 9, "Spectral", "Shaper", ",", "Ozone", 9, "Vintage", "Compressor", ",", "Ozone", 9, "Vintage", "EQ", ",", "Ozone", 9, "Vintage", "Limiter", ",", "Ozone", 9, "Vintage", "Tape", ",", "Ozone", "Imager", ",", "Phaser", "BI-TRON", ",", "Phasis", ",", "Portal", ",", "R0Verb", ",", "Reaktor", 6, "MFX", ",", "Reaktor", 6, "MIDIFX", ",", "REAMP", ",", "REF", "SEND", ",", "REFERENCE", ",", "Relay", ",", "RoughRider3", ",", "RX", 7, "Breath", "Control", ",", "RX", 7, "Connect", ",", "RX", 7, "De-click", ",", "RX", 7, "De-clip", ",", "RX", 7, "De-crackle", ",", "RX", 7, "De-ess", ",", "RX", 7, "De-hum", ",", "RX", 7, "De-plosive", ",", "RX", 7, "De-reverb", ",", "RX", 7, "Mouth", "De-click", ",", "RX", 7, "Spectral", "De-noise", ",", "RX", 7, "Voice", "De-noise", ",", "Saturation", "Knob", ",", "SerumFX", ",", "Snap", "Heap", ",", "Sonarworks", "Reference", 4, ",", "SoundField", "By", "RODE", ",", "Spectral", "Averaging", ",", "Spectral", "Bin", "Shift", ",", "Spectral", "Blurring", ",", "Spectral", "DroneMaker", ",", "Spectral", "Emergence", ",", "Spectral", "Filterbank", ",", "Spectral", "Freezing", ",", "Spectral", "Gate", "And", "Hold", ",", "Spectral", "Gliding", "Filters", ",", "Spectral", "Granulation", ",", "Spectral", "Harmonizer", ",", "Spectral", "Partial", "Glide", ",", "Spectral", "Pitch", "Shift", ",", "Spectral", "Pulsing", ",", "Spectral", "Shimmer", ",", "Spectral", "Shuffle", ",", "Spectral", "Stretch", ",", "Spectral", "Tracing", ",", "Spectral", "Weave", ",", "SquashIt", ",", "Stereo", ",", "Strata", ",", "Stutter", "Edit", ",", "Super", "Filterbank", ",", "SurferEQ", "Boogie", ",", "SurgeEffectsBank", ",", "TAL", "Reverb", 4, "Plugin", ",", "TAL-Chorus-LX", ",", "TAL-Filter-2", ",", "TAL-Reverb-2", ",", "TAL-Vocoder-2", ",", "Tonal", "Balance", "Control", 2, ",", "ValhallaFreqEcho", ",", "ValhallaSpaceModulator", ",", "ValhallaSupermassive", ",", "VariSpeed", ",", "Virta", ",", "voiceofsnow", ",", "Zap" ],
 					"maxclass" : "chooser",
 					"multiselect" : 0,
 					"numinlets" : 1,
@@ -4357,6 +4407,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"source" : [ "obj-36", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-37", 0 ]
 				}
 
 			}
@@ -4864,7 +4921,7 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4875,12 +4932,12 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
-					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"fontname" : [ "Open Sans Semibold" ],
-					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
-					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ]
+					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
+					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -4889,8 +4946,8 @@
 , 			{
 				"name" : "Matt",
 				"default" : 				{
-					"fontface" : [ 1 ],
-					"fontsize" : [ 10.0 ]
+					"fontsize" : [ 10.0 ],
+					"fontface" : [ 1 ]
 				}
 ,
 				"parentstyle" : "",
@@ -4899,8 +4956,7 @@
 , 			{
 				"name" : "WTF",
 				"default" : 				{
-					"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
-					"fontsize" : [ 18.0 ],
+					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -4911,10 +4967,11 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
+					"fontsize" : [ 18.0 ],
+					"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 					"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
 					"fontname" : [ "HydrogenType" ],
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 					"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
 				}
 ,
@@ -4924,9 +4981,7 @@
 , 			{
 				"name" : "classic",
 				"default" : 				{
-					"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontsize" : [ 9.0 ],
+					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
 						"color1" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
@@ -4936,10 +4991,12 @@
 						"proportion" : 0.39
 					}
 ,
-					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"fontsize" : [ 9.0 ],
+					"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 					"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"fontname" : [ "Geneva" ],
-					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -4994,9 +5051,9 @@
 				"name" : "classicKslider",
 				"default" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -5034,8 +5091,8 @@
 , 			{
 				"name" : "classicNodes",
 				"default" : 				{
-					"fontsize" : [ 9.0 ],
 					"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
+					"fontsize" : [ 9.0 ],
 					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 				}
 ,
@@ -5140,8 +5197,6 @@
 , 			{
 				"name" : "dark-night-patch",
 				"default" : 				{
-					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
-					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -5151,7 +5206,9 @@
 						"proportion" : 0.39
 					}
 ,
-					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
+					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
+					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
+					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -5165,9 +5222,7 @@
 , 			{
 				"name" : "jpatcher002",
 				"default" : 				{
-					"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
-					"fontsize" : [ 9.5 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
 						"color1" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
@@ -5177,6 +5232,8 @@
 						"proportion" : 0.39
 					}
 ,
+					"fontsize" : [ 9.5 ],
+					"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 					"fontname" : [ "Ableton Sans Book" ]
 				}
 ,
@@ -5186,8 +5243,7 @@
 , 			{
 				"name" : "jpink",
 				"default" : 				{
-					"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
-					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 					"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -5199,11 +5255,12 @@
 						"autogradient" : 0
 					}
 ,
-					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+					"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -5305,8 +5362,8 @@
 , 			{
 				"name" : "purple",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ]
+					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ],
+					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -5373,8 +5430,8 @@
 , 			{
 				"name" : "test",
 				"default" : 				{
-					"fontface" : [ 1 ],
-					"fontsize" : [ 10.0 ]
+					"fontsize" : [ 10.0 ],
+					"fontface" : [ 1 ]
 				}
 ,
 				"parentstyle" : "",
@@ -5383,11 +5440,11 @@
 , 			{
 				"name" : "whitey",
 				"default" : 				{
-					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
-					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 					"fontsize" : [ 36.0 ],
+					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
+					"fontname" : [ "Dirty Ego" ],
 					"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-					"fontname" : [ "Dirty Ego" ]
+					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
